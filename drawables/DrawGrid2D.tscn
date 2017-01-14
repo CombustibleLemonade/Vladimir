@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://drawables/DrawGrid2D.gd" type="Script" id=1]
+
+[node name="DrawGrid2D" type="Node2D"]
+
+transform/pos = Vector2( 353.456, 341.63 )
+script/script = ExtResource( 1 )
+bounds = Rect2( -100, -100, 200, 200 )
+scale = 50.0
+color = Color( 0.484375, 0.484375, 0.484375, 1 )
+
+

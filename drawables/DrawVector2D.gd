@@ -5,6 +5,7 @@ export(Vector2) var target = Vector2() setget set_target_pos
 export(int) var thickness = 1
 export(float) var scale = 100.0
 export(float) var cut = 3 # Amount to cut off the end
+export(bool) var editable = true
 
 var vecArr = []
 
