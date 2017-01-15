@@ -8,9 +8,11 @@ export(float) var cut = 3 # Amount to cut off the end
 export(bool) var editable = true
 
 var vecArr = []
+var is_moving = false
 
 func _ready():
 	set_process(true)
+	set_process_input(true)
 
 func _process(delta):
 	on_target_change()
@@ -35,7 +37,8 @@ func on_target_change():
 		vecArr[i] = v
 	
 	set_polygon(vecArr)
-	get_node("Target").set_rot(target.angle())
+	get_node("Target/TargetRotated").set_rot(target.angle())
+	get_node("Target/Label").set_text(str(target))
 
 func set_target_pos(t):
 	if not has_node("Target"):
@@ -44,3 +47,14 @@ func set_target_pos(t):
 	target = t
 	var target_node = get_node("Target")
 	target_node.set_pos(target * scale)
+
+func target_input_event( event ):
+	if event.type == InputEvent.MOUSE_MOTION and Input.is_action_pressed("drag_object"):
+		is_moving = true
+
+func _input(event):
+	if is_moving and event.type == InputEvent.MOUSE_MOTION:
+		var t = get_node("Target")
+		t.set_global_pos(t.get_global_pos() + Vector2(event.relative_x, event.relative_y))
+	if event.is_action_released("drag_object"):
+		is_moving = false

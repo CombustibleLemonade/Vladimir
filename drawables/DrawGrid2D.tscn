@@ -4,7 +4,6 @@
 
 [node name="DrawGrid2D" type="Node2D"]
 
-transform/pos = Vector2( 353.456, 341.63 )
 script/script = ExtResource( 1 )
 bounds = Rect2( -100, -100, 200, 200 )
 scale = 50.0

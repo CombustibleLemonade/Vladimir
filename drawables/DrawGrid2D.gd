@@ -49,6 +49,7 @@ func _draw():
 		
 		draw_line(start_pos, end_pos, color, thickness)
 
+# Add a vector to be displayed in the grid
 func add_vector(v, name):
 	var Vector2D = preload("DrawVector2D.tscn")
 	var newvec = Vector2D.instance()

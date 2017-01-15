@@ -25,12 +25,42 @@ editable = false
 
 [node name="Target" type="Node2D" parent="."]
 
+[node name="TargetRotated" type="Node2D" parent="Target"]
+
 editor/display_folded = true
 
-[node name="Sprite" type="Sprite" parent="Target"]
+[node name="Sprite" type="Sprite" parent="Target/TargetRotated"]
 
-transform/pos = Vector2( 0, -5 )
+transform/pos = Vector2( 0, -3.8 )
 transform/scale = Vector2( 0.03, 0.03 )
 texture = ExtResource( 2 )
+
+[node name="Container" type="Container" parent="Target/TargetRotated"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = -10.0
+margin/top = -10.0
+margin/right = 10.0
+margin/bottom = 10.0
+
+[node name="Label" type="Label" parent="Target"]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 40.0
+margin/bottom = 14.0
+text = "(0, 0)"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[connection signal="input_event" from="Target/TargetRotated/Container" to="." method="target_input_event"]
 
 
