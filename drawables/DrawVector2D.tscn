@@ -25,6 +25,8 @@ editable = false
 
 [node name="Target" type="Node2D" parent="."]
 
+editor/display_folded = true
+
 [node name="TargetRotated" type="Node2D" parent="Target"]
 
 editor/display_folded = true

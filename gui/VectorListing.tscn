@@ -1,0 +1,66 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://gui/VectorListing.gd" type="Script" id=1]
+
+[node name="Vector" type="HBoxContainer"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 288.0
+margin/bottom = 14.0
+alignment = 0
+script/script = ExtResource( 1 )
+
+[node name="name" type="Label" parent="."]
+
+rect/min_size = Vector2( 50, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 180.0
+margin/bottom = 14.0
+text = "name"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="x" type="Label" parent="."]
+
+rect/min_size = Vector2( 50, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 184.0
+margin/top = 0.0
+margin/right = 234.0
+margin/bottom = 14.0
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="y" type="Label" parent="."]
+
+rect/min_size = Vector2( 50, 0 )
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 238.0
+margin/top = 0.0
+margin/right = 288.0
+margin/bottom = 14.0
+text = "0"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+

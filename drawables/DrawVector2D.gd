@@ -1,6 +1,8 @@
 tool
 extends Polygon2D
 
+signal change
+
 export(Vector2) var target = Vector2() setget set_target_pos
 export(int) var thickness = 1
 export(float) var scale = 100.0
@@ -39,6 +41,8 @@ func on_target_change():
 	set_polygon(vecArr)
 	get_node("Target/TargetRotated").set_rot(target.angle())
 	get_node("Target/Label").set_text(str(target))
+	
+	emit_signal("change")
 
 func set_target_pos(t):
 	if not has_node("Target"):

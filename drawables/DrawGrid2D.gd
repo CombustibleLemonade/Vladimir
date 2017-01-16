@@ -5,9 +5,6 @@ export(Rect2) var bounds = Rect2(Vector2(-100, -100), Vector2(200, 200)) setget 
 export(float) var scale = 20 setget set_scale
 export(Color) var color = Color(0.1, 0.1, 0.1) setget set_color
 
-func _ready():
-	add_vector(Vector2(3, 1), "Vec1")
-
 func set_bounds(b):
 	bounds = b
 	update()
@@ -54,7 +51,11 @@ func add_vector(v, name):
 	var Vector2D = preload("DrawVector2D.tscn")
 	var newvec = Vector2D.instance()
 	
+	if name == "":
+		name = "Name"
+	
 	newvec.set_name(name)
 	newvec.target = v
 	
 	add_child(newvec)
+	return newvec
