@@ -31,7 +31,7 @@ margin/right = 200.0
 margin/bottom = 600.0
 alignment = 0
 
-[node name="AddVectorMenu" type="VBoxContainer" parent="Menu"]
+[node name="AddItemMenu" type="VBoxContainer" parent="Menu"]
 
 editor/display_folded = true
 focus/ignore_mouse = false
@@ -44,7 +44,7 @@ margin/right = 200.0
 margin/bottom = 76.0
 alignment = 0
 
-[node name="Values" type="HBoxContainer" parent="Menu/AddVectorMenu"]
+[node name="Values" type="HBoxContainer" parent="Menu/AddItemMenu"]
 
 editor/display_folded = true
 focus/ignore_mouse = false
@@ -57,7 +57,7 @@ margin/right = 200.0
 margin/bottom = 24.0
 alignment = 0
 
-[node name="x" type="LineEdit" parent="Menu/AddVectorMenu/Values"]
+[node name="x" type="LineEdit" parent="Menu/AddItemMenu/Values"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -73,7 +73,7 @@ focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="y" type="LineEdit" parent="Menu/AddVectorMenu/Values"]
+[node name="y" type="LineEdit" parent="Menu/AddItemMenu/Values"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -89,7 +89,7 @@ focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="Name" type="LineEdit" parent="Menu/AddVectorMenu"]
+[node name="Name" type="LineEdit" parent="Menu/AddItemMenu"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -105,7 +105,7 @@ focus_mode = 2
 caret/caret_blink = false
 caret/caret_blink_speed = 0.65
 
-[node name="AddButton" type="Button" parent="Menu/AddVectorMenu"]
+[node name="AddButton" type="Button" parent="Menu/AddItemMenu"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -121,7 +121,7 @@ shortcut = null
 text = "Add"
 flat = false
 
-[node name="VectorList" type="VBoxContainer" parent="Menu"]
+[node name="ItemList" type="VBoxContainer" parent="Menu"]
 
 focus/ignore_mouse = false
 focus/stop_mouse = false
@@ -165,7 +165,7 @@ gui/disable_input = false
 
 [node name="DrawGrid2D" parent="Grid/Viewport/Camera" instance=ExtResource( 2 )]
 
-[connection signal="pressed" from="Menu/AddVectorMenu/AddButton" to="." method="on_add_vector_button_pressed"]
+[connection signal="pressed" from="Menu/AddItemMenu/AddButton" to="." method="on_add_vector_button_pressed"]
 
 [connection signal="size_changed" from="Grid/Viewport" to="." method="viewport_size_changed"]
 

@@ -7,6 +7,6 @@
 script/script = ExtResource( 1 )
 bounds = Rect2( -100, -100, 200, 200 )
 scale = 50.0
-color = Color( 0.484375, 0.484375, 0.484375, 1 )
+color = Color( 0.363281, 0.363281, 0.363281, 1 )
 
 

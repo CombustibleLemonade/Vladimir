@@ -16,9 +16,6 @@ func _ready():
 	set_process(true)
 	set_process_input(true)
 
-func _process(delta):
-	on_target_change()
-
 func on_target_change():
 	target = get_node("Target").get_pos() / scale
 	
@@ -51,6 +48,8 @@ func set_target_pos(t):
 	target = t
 	var target_node = get_node("Target")
 	target_node.set_pos(target * scale)
+	
+	on_target_change()
 
 func target_input_event( event ):
 	if event.type == InputEvent.MOUSE_MOTION and Input.is_action_pressed("drag_object"):
@@ -60,5 +59,6 @@ func _input(event):
 	if is_moving and event.type == InputEvent.MOUSE_MOTION:
 		var t = get_node("Target")
 		t.set_global_pos(t.get_global_pos() + Vector2(event.relative_x, event.relative_y))
+		on_target_change()
 	if event.is_action_released("drag_object"):
 		is_moving = false

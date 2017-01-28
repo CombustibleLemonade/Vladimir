@@ -11,56 +11,53 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
 margin/right = 288.0
-margin/bottom = 14.0
+margin/bottom = 24.0
 alignment = 0
 script/script = ExtResource( 1 )
 
-[node name="name" type="Label" parent="."]
+[node name="name" type="LineEdit" parent="."]
 
-rect/min_size = Vector2( 50, 0 )
-focus/ignore_mouse = true
+focus/ignore_mouse = false
 focus/stop_mouse = true
-size_flags/horizontal = 3
+size_flags/horizontal = 2
 size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 0.0
-margin/right = 180.0
-margin/bottom = 14.0
-text = "name"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+margin/right = 58.0
+margin/bottom = 24.0
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
 
-[node name="x" type="Label" parent="."]
+[node name="x" type="LineEdit" parent="."]
 
-rect/min_size = Vector2( 50, 0 )
-focus/ignore_mouse = true
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 184.0
+size_flags/vertical = 2
+margin/left = 62.0
 margin/top = 0.0
-margin/right = 234.0
-margin/bottom = 14.0
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+margin/right = 120.0
+margin/bottom = 24.0
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
 
-[node name="y" type="Label" parent="."]
+[node name="y" type="LineEdit" parent="."]
 
-rect/min_size = Vector2( 50, 0 )
-focus/ignore_mouse = true
+focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 238.0
+size_flags/vertical = 2
+margin/left = 124.0
 margin/top = 0.0
-margin/right = 288.0
-margin/bottom = 14.0
-text = "0"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
+margin/right = 182.0
+margin/bottom = 24.0
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
 
 

@@ -1,0 +1,119 @@
+[gd_scene format=1]
+
+[node name="Menu" type="VBoxContainer"]
+
+editor/display_folded = true
+rect/min_size = Vector2( 200, 0 )
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 200.0
+margin/bottom = 600.0
+alignment = 0
+
+[node name="AddVectorMenu" type="VBoxContainer" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 200.0
+margin/bottom = 76.0
+alignment = 0
+
+[node name="Values" type="HBoxContainer" parent="AddVectorMenu"]
+
+editor/display_folded = true
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 200.0
+margin/bottom = 24.0
+alignment = 0
+
+[node name="x" type="LineEdit" parent="AddVectorMenu/Values"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 98.0
+margin/bottom = 24.0
+text = "0"
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="y" type="LineEdit" parent="AddVectorMenu/Values"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 2
+margin/left = 102.0
+margin/top = 0.0
+margin/right = 200.0
+margin/bottom = 24.0
+text = "0"
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="Name" type="LineEdit" parent="AddVectorMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 28.0
+margin/right = 200.0
+margin/bottom = 52.0
+placeholder/text = "Name"
+placeholder/alpha = 0.6
+focus_mode = 2
+caret/caret_blink = false
+caret/caret_blink_speed = 0.65
+
+[node name="AddButton" type="Button" parent="AddVectorMenu"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 56.0
+margin/right = 200.0
+margin/bottom = 76.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "Add"
+flat = false
+
+[node name="VectorList" type="VBoxContainer" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = false
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 0.0
+margin/top = 80.0
+margin/right = 200.0
+margin/bottom = 80.0
+alignment = 0
+
+
