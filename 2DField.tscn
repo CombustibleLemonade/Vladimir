@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://2DField.gd" type="Script" id=1]
+
+[node name="2DField" type="Node2D"]
+
+transform/scale = Vector2( 100, 100 )
+script/script = ExtResource( 1 )
+
+[connection signal="draw" from="." to="." method="on_transform_change"]
+
+[connection signal="item_rect_changed" from="." to="." method="on_transform_change"]
+
+

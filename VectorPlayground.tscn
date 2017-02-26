@@ -1,0 +1,42 @@
+[gd_scene load_steps=3 format=1]
+
+[ext_resource path="res://VectorPlaygroundMenu.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ZoomDrag.tscn" type="PackedScene" id=2]
+
+[node name="VectorPlayground" type="HBoxContainer"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = true
+focus/stop_mouse = false
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 0.0
+margin/top = 0.0
+margin/right = 0.0
+margin/bottom = 0.0
+alignment = 0
+
+[node name="VectorPlaygroundMenu" parent="." instance=ExtResource( 1 )]
+
+margin/right = 250.0
+margin/bottom = 600.0
+
+[node name="ZoomDragControl" type="Control" parent="."]
+
+editor/display_folded = true
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 3
+size_flags/vertical = 3
+margin/left = 254.0
+margin/top = 0.0
+margin/right = 1024.0
+margin/bottom = 600.0
+
+[node name="ZoomDrag" parent="ZoomDragControl" instance=ExtResource( 2 )]
+
+rect = Rect2( 0, 0, 770, 600 )
+zoom_to_cursor = true
+
+
