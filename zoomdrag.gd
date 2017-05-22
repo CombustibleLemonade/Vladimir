@@ -1,7 +1,5 @@
 extends Viewport
 
-# TODO: test
-
 export(String, FILE, "*.tscn") var environment
 export(float) var zoom_factor = 1.1
 export(bool) var zoom_to_cursor = true
@@ -14,6 +12,8 @@ func _ready():
 	
 	instance = load(environment).instance()
 	add_child(instance)
+	
+	instance.translate(get_rect().size / 2)
 
 func _input(event):
 	if drag and event.type == InputEvent.MOUSE_MOTION:
@@ -38,7 +38,6 @@ func zoom(factor):
 	instance.translate(-pivot)
 	
 	var p = instance.get_pos()
-	
 	
 	instance.scale(Vector2(factor, factor))
 	instance.set_pos( p * factor)

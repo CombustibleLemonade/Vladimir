@@ -19,7 +19,7 @@ audio_listener/enable_3d = false
 physics/object_picking = false
 gui/disable_input = false
 script/script = ExtResource( 1 )
-environment = "res://2DField.tscn"
+environment = "res://2DGrid.tscn"
 zoom_factor = 1.1
 zoom_to_cursor = true
 

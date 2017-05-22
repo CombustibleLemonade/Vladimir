@@ -24,7 +24,6 @@ margin/bottom = 600.0
 
 [node name="ZoomDragControl" type="Control" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = true
 focus/stop_mouse = true
 size_flags/horizontal = 3
@@ -37,6 +36,6 @@ margin/bottom = 600.0
 [node name="ZoomDrag" parent="ZoomDragControl" instance=ExtResource( 2 )]
 
 rect = Rect2( 0, 0, 770, 600 )
-zoom_to_cursor = true
+environment = "res://2DPlane.tscn"
 
 
