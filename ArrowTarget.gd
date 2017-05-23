@@ -6,6 +6,9 @@ func _ready():
 	set_process(true)
 
 func _process(delta):
+	# Keep global scale constant at Vector2(1, 1)
+	set_scale(get_scale() / get_global_scale())
+	
 	get_node("Control").set_scale(Vector2(1, 1) / get_global_scale())
 	get_node("Control").set_pos(- Vector2(20, 20) / get_global_scale())
 
