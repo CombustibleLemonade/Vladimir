@@ -2,8 +2,8 @@ tool
 
 extends Node2D
 
-var target_pos setget set_target_pos,get_target_pos
-var target_rotation setget ,get_target_rotation
+export(Vector2) var target_pos setget set_target_pos,get_target_pos
+export(Vector2) var target_rotation setget ,get_target_rotation
 
 var crop = 10
 var thickness = 3

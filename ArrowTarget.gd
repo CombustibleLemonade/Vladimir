@@ -10,7 +10,7 @@ func _process(delta):
 	set_scale(get_scale() / get_global_scale())
 	
 	get_node("Control").set_scale(Vector2(1, 1) / get_global_scale())
-	get_node("Control").set_pos(- Vector2(20, 20) / get_global_scale())
+	get_node("Control").set_pos(-Vector2(20, 20) / get_global_scale())
 
 # Set position override triggering drawing procedure
 func set_pos(p):

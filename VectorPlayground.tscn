@@ -19,7 +19,6 @@ alignment = 0
 
 [node name="VectorPlaygroundMenu" parent="." instance=ExtResource( 1 )]
 
-margin/right = 250.0
 margin/bottom = 600.0
 
 [node name="ZoomDragControl" type="Control" parent="."]
