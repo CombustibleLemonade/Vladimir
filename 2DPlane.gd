@@ -1,19 +1,19 @@
 extends Node2D
 
 func _ready():
-	# Called every time the node is added to the scene.
-	# Initialization here
-	add_vector(Vector2(), "ASDF")
+	pass
 
-# TODO
-func add_vector(v, name):
-	print(v)
+# TODO: implement vector addition
+func add_vector(identifier):
+	var vector = preload("res://Arrow.tscn").instance()
+	add_child(vector)
+	return vector
 
-# TODO
-func add_grid(m, name):
-	print(m)
+# TODO: implement grid addition
+func add_grid(identifier):
+	print(identifier)
 
-# TODO
-func remove(name):
-	print(name)
+# TODO: implement removal
+func remove(identifier):
+	print(identifier)
 

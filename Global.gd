@@ -2,16 +2,15 @@ extends Node
 
 class Identifier:
 	var name = ""
+	var code = ""
 	var refresh = true
 	var result
 
 class Expression:
 	extends Identifier
-	var code = ""
 
 class Variable:
 	extends Identifier
-	var value = ""
 
 func evaluate(identifiers):
 	var source_code = ""
@@ -23,7 +22,7 @@ func evaluate(identifiers):
 			
 			source_code += v + e
 		elif id extends Variable:
-			var v = "var " + id.name + " = " + id.value + "\n"
+			var v = "var " + id.name + " = " + id.code + "\n"
 			source_code += v
 	
 	var script = GDScript.new()

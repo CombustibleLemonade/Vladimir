@@ -1,6 +1,4 @@
 extends HBoxContainer
 
 func _ready():
-	set_process_input(true)
-
-
+	get_node("VectorPlaygroundMenu").target_space = get_node("ZoomDragControl/ZoomDrag/2DPlane")

@@ -6,6 +6,8 @@
 [node name="Arrow" type="Node2D"]
 
 script/script = ExtResource( 1 )
+target_pos = Vector2( 100, 0 )
+target_rotation = 1.5708
 
 [node name="Target" type="Node2D" parent="."]
 

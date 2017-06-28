@@ -35,4 +35,4 @@ func _draw():
 		verts[i] *= 10
 		verts[i] /= get_global_scale()
 	
-	draw_colored_polygon(verts, Color(1, 1, 1))
+	draw_colored_polygon(verts, get_parent().color)

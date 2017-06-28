@@ -2,22 +2,47 @@ tool
 
 extends Node2D
 
+signal target_change
+
 export(Vector2) var target_pos setget set_target_pos,get_target_pos
 export(Vector2) var target_rotation setget ,get_target_rotation
 
-var crop = 10
+var crop = 20
 var thickness = 3
+var is_disabled = false
+var color = Color(1, 1, 1)
 
 func _ready():
 	set_process(true)
 	set_process_input(true)
 
+var previous_pos = Vector2()
 func _process(delta):
+	redraw()
+	if get_node("Target").get_pos() != previous_pos:
+		previous_pos = get_node("Target").get_pos()
+		emit_signal("target_change")
+
+func redraw():
 	update()
 	get_node("Target").update()
 
+func set_disabled(var _is_disabled):
+	is_disabled = _is_disabled
+	if is_disabled:
+		color = Color(1.0, 1.0, 1.0, 0.5)
+		get_node("Target/Control").hide()
+	else:
+		color = Color(1.0, 1.0, 1.0)
+		get_node("Target/Control").show()
+	
+	print(is_disabled)
+	redraw()
+
 func set_target_pos(p):
-	get_node("Target").set_pos(p)
+	if has_node("Target"):
+		get_node("Target").set_pos(p)
+		previous_pos = p
 
 func get_target_pos():
 	return get_node("Target").get_pos()
@@ -40,13 +65,15 @@ func _draw():
 		verts[i] = verts[i].rotated(angle)
 		verts[i] /= get_global_scale()
 	
-	draw_colored_polygon(verts, Color(1, 1, 1))
+	draw_colored_polygon(verts, color)
 
 func _on_target_item_rect_changed():
 	print("asdf")
 
 var base_pos = Vector2()
 func input_event( ev ):
+	if is_disabled:
+		return
 	
 	if ev.type == InputEvent.MOUSE_BUTTON:
 		if ev.button_index == BUTTON_LEFT:

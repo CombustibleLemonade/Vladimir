@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=1]
+[gd_scene load_steps=2 format=1]
 
 [ext_resource path="res://VectorPlaygroundMenu.gd" type="Script" id=1]
-[ext_resource path="res://Expression.tscn" type="PackedScene" id=2]
 
 [node name="VectorPlaygroundMenu" type="VBoxContainer"]
 
@@ -19,7 +18,6 @@ script/script = ExtResource( 1 )
 
 [node name="AddConfig" type="TabContainer" parent="."]
 
-editor/display_folded = true
 rect/min_size = Vector2( 0, 150 )
 focus/ignore_mouse = false
 focus/stop_mouse = true
@@ -134,7 +132,6 @@ flat = false
 
 [node name="Vector" type="VBoxContainer" parent="AddConfig"]
 
-editor/display_folded = true
 visibility/visible = false
 anchor/right = 1
 anchor/bottom = 1
@@ -293,7 +290,6 @@ flat = false
 
 [node name="IdentifierList" type="VBoxContainer" parent="."]
 
-editor/display_folded = true
 focus/ignore_mouse = false
 focus/stop_mouse = false
 size_flags/horizontal = 2
@@ -301,16 +297,8 @@ size_flags/vertical = 2
 margin/left = 0.0
 margin/top = 154.0
 margin/right = 250.0
-margin/bottom = 178.0
+margin/bottom = 154.0
 alignment = 0
-
-[node name="Expression" parent="IdentifierList" instance=ExtResource( 2 )]
-
-anchor/right = 0
-anchor/bottom = 0
-size_flags/vertical = 2
-margin/right = 250.0
-margin/bottom = 24.0
 
 [connection signal="pressed" from="AddConfig/Expression/Add" to="." method="add_expression"]
 

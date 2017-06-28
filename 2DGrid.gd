@@ -5,6 +5,10 @@ signal move(v)
 
 var bounds = Rect2(Vector2(-20, -20), Vector2(40, 40))
 
+# Vectors that determine the matrix multiplication
+var x_vector = Vector2(1, 0)
+var y_vector = Vector2(0, 1)
+
 func on_transform_change():
 	bounds = get_viewport_rect()
 	var r = get_global_transform().affine_inverse()
